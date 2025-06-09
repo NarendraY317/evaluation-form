@@ -6,46 +6,45 @@
     <title>Chairman's Evaluation Form</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Your existing styles are perfect, no changes needed here. */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #eef2f6; /* Light bluish-grey background */
+            background-color: #eef2f6;
         }
         .rating-label {
             cursor: pointer;
-            padding: 0.6rem 0.9rem; /* Slightly larger padding */
-            border-radius: 0.6rem; /* More rounded corners */
+            padding: 0.6rem 0.9rem;
+            border-radius: 0.6rem;
             transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.1s ease-in-out;
             display: inline-block;
             text-align: center;
-            min-width: 3rem; /* Ensure consistent width */
-            font-size: 0.95rem; /* Slightly larger font */
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Subtle shadow */
+            min-width: 3rem;
+            font-size: 0.95rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
         .rating-label:hover {
-            background-color: #d1d8ec; /* Lighter blue on hover */
-            transform: translateY(-1px); /* Slight lift on hover */
+            background-color: #d1d8ec;
+            transform: translateY(-1px);
         }
         input[type="radio"]:checked + .rating-label {
-            background-color: #3b82f6; /* A clear blue for selected */
+            background-color: #3b82f6;
             color: white;
             font-weight: bold;
-            box-shadow: 0 2px 5px rgba(59, 130, 246, 0.3); /* Stronger shadow when selected */
+            box-shadow: 0 2px 5px rgba(59, 130, 246, 0.3);
         }
         input[type="radio"] {
             display: none;
         }
         textarea, input[type="text"] {
-            border: 1px solid #d1d5db; /* Light grey border */
+            border: 1px solid #d1d5db;
             border-radius: 0.5rem;
             padding: 0.75rem 1rem;
             box-shadow: inset 0 1px 2px rgba(0,0,0,0.04);
             transition: border-color 0.2s, box-shadow 0.2s;
         }
         textarea:focus, input[type="text"]:focus {
-            border-color: #3b82f6; /* Blue border on focus */
+            border-color: #3b82f6;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); /* Blue glow on focus */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
         }
     </style>
 </head>
@@ -74,7 +73,7 @@
                        placeholder="Enter your name">
             </div>
 
-            <div class="bg-blue-50 p-7 rounded-lg border border-blue-200 shadow-md">
+            <div class="bg-blue-50 p-7 rounded-lg border border-blue-200 shadow-md mb-8">
                 <h2 class="text-2xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">
                     1. Strategic Vision & Direction
                 </h2>
@@ -114,7 +113,7 @@
                 </div>
             </div>
 
-            <div class="bg-blue-50 p-7 rounded-lg border border-blue-200 shadow-md">
+            <div class="bg-blue-50 p-7 rounded-lg border border-blue-200 shadow-md mb-8">
                 <h2 class="text-2xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">
                     2. Operational Excellence & Execution
                 </h2>
@@ -154,7 +153,7 @@
                 </div>
             </div>
 
-            <div class="bg-blue-50 p-7 rounded-lg border border-blue-200 shadow-md">
+            <div class="bg-blue-50 p-7 rounded-lg border border-blue-200 shadow-md mb-8">
                 <h2 class="text-2xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">
                     3. Innovation & Growth Potential
                 </h2>
@@ -166,4 +165,81 @@
                             <label><input type="radio" name="q3_1_rating" value="1" required><span class="rating-label bg-gray-200 text-gray-700 hover:bg-red-100">1 (Unsatisfactory)</span></label>
                             <label><input type="radio" name="q3_1_rating" value="2"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-orange-100">2 (Needs Improvement)</span></label>
                             <label><input type="radio" name="q3_1_rating" value="3"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-yellow-100">3 (Satisfactory)</span></label>
-                            <label><input type="radio" name="q3_1_rating" value="
+                            <label><input type="radio" name="q3_1_rating" value="4"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-lime-100">4 (Good)</span></label>
+                            <label><input type="radio" name="q3_1_rating" value="5"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-green-100">5 (Excellent)</span></label>
+                        </div>
+                    </div>
+                    <label for="q3_1_comment" class="block text-lg font-medium text-gray-700 mb-3">Comments on Innovation Culture:</label>
+                    <textarea id="q3_1_comment" name="q3_1_comment" rows="4"
+                        class="mt-1 block w-full text-gray-800 focus:ring-blue-500 focus:border-blue-500 sm:text-md resize-y"
+                        placeholder="Assess how well a culture of innovation is being fostered..."></textarea>
+                </div>
+                <div class="mb-7 pb-5 last:border-b-0">
+                    <p class="text-xl font-medium text-gray-800 mb-4">3.2 Potential for Sustainable Growth & Market Leadership:</p>
+                    <div class="flex flex-wrap gap-4 items-center mb-5">
+                        <span class="text-gray-600 font-semibold mr-2">Rating (1-5):</span>
+                        <div class="flex space-x-3">
+                            <label><input type="radio" name="q3_2_rating" value="1" required><span class="rating-label bg-gray-200 text-gray-700 hover:bg-red-100">1 (Unsatisfactory)</span></label>
+                            <label><input type="radio" name="q3_2_rating" value="2"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-orange-100">2 (Needs Improvement)</span></label>
+                            <label><input type="radio" name="q3_2_rating" value="3"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-yellow-100">3 (Satisfactory)</span></label>
+                            <label><input type="radio" name="q3_2_rating" value="4"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-lime-100">4 (Good)</span></label>
+                            <label><input type="radio" name="q3_2_rating" value="5"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-green-100">5 (Excellent)</span></label>
+                        </div>
+                    </div>
+                    <label for="q3_2_comment" class="block text-lg font-medium text-gray-700 mb-3">Comments on Growth Potential:</label>
+                    <textarea id="q3_2_comment" name="q3_2_comment" rows="4"
+                        class="mt-1 block w-full text-gray-800 focus:ring-blue-500 focus:border-blue-500 sm:text-md resize-y"
+                        placeholder="Evaluate the potential for sustainable growth and achieving market leadership..."></textarea>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 p-7 rounded-lg border border-blue-200 shadow-md mb-8">
+                <h2 class="text-2xl font-bold text-blue-700 mb-6 border-b-2 border-blue-200 pb-3">
+                    4. Financial Health & Performance
+                </h2>
+                <div class="mb-7 pb-5 border-b border-blue-100 last:border-b-0">
+                    <p class="text-xl font-medium text-gray-800 mb-4">4.1 Revenue Growth & Profitability Trends:</p>
+                    <div class="flex flex-wrap gap-4 items-center mb-5">
+                        <span class="text-gray-600 font-semibold mr-2">Rating (1-5):</span>
+                        <div class="flex space-x-3">
+                            <label><input type="radio" name="q4_1_rating" value="1" required><span class="rating-label bg-gray-200 text-gray-700 hover:bg-red-100">1 (Unsatisfactory)</span></label>
+                            <label><input type="radio" name="q4_1_rating" value="2"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-orange-100">2 (Needs Improvement)</span></label>
+                            <label><input type="radio" name="q4_1_rating" value="3"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-yellow-100">3 (Satisfactory)</span></label>
+                            <label><input type="radio" name="q4_1_rating" value="4"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-lime-100">4 (Good)</span></label>
+                            <label><input type="radio" name="q4_1_rating" value="5"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-green-100">5 (Excellent)</span></label>
+                        </div>
+                    </div>
+                    <label for="q4_1_comment" class="block text-lg font-medium text-gray-700 mb-3">Comments on Financial Growth:</label>
+                    <textarea id="q4_1_comment" name="q4_1_comment" rows="4"
+                        class="mt-1 block w-full text-gray-800 focus:ring-blue-500 focus:border-blue-500 sm:text-md resize-y"
+                        placeholder="Analyze revenue growth and profitability trends..."></textarea>
+                </div>
+                <div class="mb-7 pb-5 last:border-b-0">
+                    <p class="text-xl font-medium text-gray-800 mb-4">4.2 Capital Management & Investment Strategy:</p>
+                    <div class="flex flex-wrap gap-4 items-center mb-5">
+                        <span class="text-gray-600 font-semibold mr-2">Rating (1-5):</span>
+                        <div class="flex space-x-3">
+                            <label><input type="radio" name="q4_2_rating" value="1" required><span class="rating-label bg-gray-200 text-gray-700 hover:bg-red-100">1 (Unsatisfactory)</span></label>
+                            <label><input type="radio" name="q4_2_rating" value="2"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-orange-100">2 (Needs Improvement)</span></label>
+                            <label><input type="radio" name="q4_2_rating" value="3"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-yellow-100">3 (Satisfactory)</span></label>
+                            <label><input type="radio" name="q4_2_rating" value="4"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-lime-100">4 (Good)</span></label>
+                            <label><input type="radio" name="q4_2_rating" value="5"><span class="rating-label bg-gray-200 text-gray-700 hover:bg-green-100">5 (Excellent)</span></label>
+                        </div>
+                    </div>
+                    <label for="q4_2_comment" class="block text-lg font-medium text-gray-700 mb-3">Comments on Capital Management:</label>
+                    <textarea id="q4_2_comment" name="q4_2_comment" rows="4"
+                        class="mt-1 block w-full text-gray-800 focus:ring-blue-500 focus:border-blue-500 sm:text-md resize-y"
+                        placeholder="Provide feedback on capital management and investment strategy..."></textarea>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-10">
+                <button type="submit"
+                    class="px-10 py-4 bg-blue-600 text-white text-xl font-bold rounded-full shadow-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-105">
+                    Submit Evaluation
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
