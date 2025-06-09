@@ -2,51 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Form Test</title>
+    <title>Pure Form Test</title>
 </head>
 <body>
 
-    <h1>Simple Form Test</h1>
+    <h1>Pure HTML Form Test</h1>
+    <p>This form has no JavaScript. It will redirect to a Netlify page after submission.</p>
 
-    <form id="evaluation-form" name="strategic-evaluation" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="strategic-evaluation" />
-        <p style="display: none;"><label>Don’t fill this out: <input name="bot-field" /></label></p>
-
+    <form name="strategic-evaluation" method="POST" data-netlify="true">
         <p>
             <label>Test Input: <input type="text" name="test-input" /></label>
         </p>
         <p>
-            <button type="submit">Submit Test</button>
+            <button type="submit">Submit Final Test</button>
         </p>
     </form>
-
-    <div id="thank-you-message" style="display: none;">
-         <h2>Submission Received!</h2>
-        <p>Thank you, the test was successful.</p>
-    </div>
-
-    <script>
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        const myForm = event.target;
-        const formData = new FormData(myForm);
-
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString(),
-        })
-        .then(() => {
-            document.getElementById("evaluation-form").style.display = "none";
-            document.getElementById("thank-you-message").style.display = "block";
-        })
-        .catch((error) => alert(error));
-      };
-
-      document
-        .getElementById("evaluation-form")
-        .addEventListener("submit", handleSubmit);
-    </script>
 
 </body>
 </html>
